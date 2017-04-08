@@ -1,5 +1,7 @@
 @echo off
 cd C:\Local\_github\mc.ATm.8.Common\
+echo -- rm --
+c:\usr\git\bin\git.exe rm .
 echo -- add --
 c:\usr\git\bin\git.exe add .
 echo -- stage --

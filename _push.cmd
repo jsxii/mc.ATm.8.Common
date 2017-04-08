@@ -1,13 +1,13 @@
 @echo off
-cd C:\Local\_github\mc.ATm.8.Common\
+cd d:\Data\_github\mc.ATm.8.Common\
 echo -- rm --
-c:\usr\git\bin\git.exe rm -r --cached .\
+d:\usr\git\bin\git.exe rm -r --cached .\
 echo -- add --
-c:\usr\git\bin\git.exe add --all .\
+d:\usr\git\bin\git.exe add --all .\
 echo -- stage --
-c:\usr\git\bin\git.exe stage
+d:\usr\git\bin\git.exe stage
 echo -- commit --
-c:\usr\git\bin\git.exe commit -m "12th"
+d:\usr\git\bin\git.exe commit -m "game\12th"
 echo -- push --
-c:\usr\git\bin\git.exe push 
+d:\usr\git\bin\git.exe push --set-upstream origin master
 

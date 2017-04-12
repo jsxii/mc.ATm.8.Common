@@ -1,0 +1,17 @@
+#
+---
+Dispatcher:
+  - Code:
+    - TaskQueueGet
+    - TaskQueueSet
+  - RAM:
+    - Queue
+    - Counters/Pointers
+
+SysTimer:
+  - Code:
+    - TimerQueueSet
+    - TimerQueueISR
+  - RAM:
+    - Queue
+    - Counters/Pointers

@@ -1,5 +1,4 @@
 @echo off
-cd C:\Local\Program\AVR\mc.ATm.8.Common\
 echo -- rm --
 c:\usr\git\bin\git.exe rm -r --cached .\
 echo -- add --

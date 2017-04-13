@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "U:\home\Programm\led-blink-dummy\labels.tmp" -fI -W+ie -C V2E -o "U:\home\Programm\led-blink-dummy\led-blink-dummy.hex" -d "U:\home\Programm\led-blink-dummy\led-blink-dummy.obj" -e "U:\home\Programm\led-blink-dummy\led-blink-dummy.eep" -m "U:\home\Programm\led-blink-dummy\led-blink-dummy.map" "U:\home\Programm\led-blink-dummy\led-blink-dummy.asm"

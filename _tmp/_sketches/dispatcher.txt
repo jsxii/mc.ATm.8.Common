@@ -1,0 +1,23 @@
+=TimerQueue=
+TaskId(1) : Count(2) : Param(1)
+
+=TaskQueue=
+TaskId(1) : Param(1)
+
+=Task=
+TaskId(1) : Addr(2) : Priority(1)
+
+SetTask(id,val);
+SetDeferedTask(id,val,count);
+
+ISR SysTimer();
+DispetcherEntry();
+
+Task01:
+try { ... }
+catch { SetTask(Task01Exception) }
+Task01Exception:
+{...}
+
+
+SetTask:	;

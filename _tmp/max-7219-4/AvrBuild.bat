@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Local\Programm\AVR\max-7219-4\labels.tmp" -fI -W+ie -C V2E -o "C:\Local\Programm\AVR\max-7219-4\max-7219-4.hex" -d "C:\Local\Programm\AVR\max-7219-4\max-7219-4.obj" -e "C:\Local\Programm\AVR\max-7219-4\max-7219-4.eep" -m "C:\Local\Programm\AVR\max-7219-4\max-7219-4.map" "C:\Local\Programm\AVR\max-7219-4\max-7219-4.asm"

@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "U:\home\Programm\a06-dummy-spi-max7219\labels.tmp" -fI -W+ie -C V2E -o "U:\home\Programm\a06-dummy-spi-max7219\a06-dummy-spi-max7219.hex" -d "U:\home\Programm\a06-dummy-spi-max7219\a06-dummy-spi-max7219.obj" -e "U:\home\Programm\a06-dummy-spi-max7219\a06-dummy-spi-max7219.eep" -m "U:\home\Programm\a06-dummy-spi-max7219\a06-dummy-spi-max7219.map" "U:\home\Programm\a06-dummy-spi-max7219\a06-dummy-spi-max7219.asm"

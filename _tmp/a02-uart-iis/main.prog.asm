@@ -1,0 +1,360 @@
+;------------------------------------------------------------
+;-- enable rx int
+Start:
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(0<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+SEI
+;-- wait first receiving
+Mainloop1:
+RCALL	Delay10K
+CP	RxF,RxL
+BREQ	Mainloop1
+;--
+RCALL	RdRxBuff
+LDI	R17,0x0D
+RCALL	WrTxBuff
+LDI	R17,0x0A
+RCALL	WrTxBuff
+;--
+LDI	ZH,high(Msg1 * 2)
+LDI	ZL,low(Msg1 * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+
+RCALL	iClrBuff
+
+LDI	R16,0xD0
+MOV	SLA,R16
+;MOV	R17,c00
+;RCALL	iWrTxBuff;
+LDI	R17,0xD9
+RCALL	iWrTxBuff;
+LDI	R17,0x59
+RCALL	iWrTxBuff;
+LDI	R17,0x73
+RCALL	iWrTxBuff;
+LDI	R17,0x05
+RCALL	iWrTxBuff;
+LDI	R17,0x16
+RCALL	iWrTxBuff;
+LDI	R17,0x02
+RCALL	iWrTxBuff;
+LDI	R17,0x17
+RCALL	iWrTxBuff;
+LDI	R17,0x00
+RCALL	iWrTxBuff;
+
+LDI	ZH,high(MsgS * 2)
+LDI	ZL,low(MsgS * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+
+
+RCALL	StartIICtransaction
+
+LDI	ZH,high(MsgE * 2)
+LDI	ZL,low(MsgE * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+;--
+Mainloop2a:
+RCALL	Delay10K
+SBRS	STREG,iTxEnd
+RJMP	Mainloop2a
+
+RCALL	iClrBuff
+;--
+LDI	R16,0xD1
+MOV	SLA,R16
+LDI	R16,8
+MOV	iRxLen,R16
+;--
+LDI	ZH,high(MsgS * 2)
+LDI	ZL,low(MsgS * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+;--
+RCALL	StartIICtransaction
+;--
+Mainloop2:
+RCALL	Delay10K
+SBRS	STREG,iRxEnd
+RJMP	Mainloop2
+;--
+LDI	R24,7
+OUT	PORTB,R24
+;--
+LDI	ZH,high(MsgE * 2)
+LDI	ZL,low(MsgE * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+;--
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+;--
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+;--
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+;--
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+LDI	R17,'.'
+RCALL	WrTxBuff
+RCALL	iRdRxBuff
+RCALL	Bin2Hex
+PUSH	R17
+PUSH	R18
+POP	R17
+RCALL	WrTxBuff
+POP	R17
+RCALL	WrTxBuff
+;--
+LDI	ZH,high(Msgz * 2)
+LDI	ZL,low(Msgz * 2)
+RCALL	PrintF
+LDI 	R16,(1<<RXCIE)|(0<<TXCIE)|(1<<UDRIE)|(1<<RXEN)|(1<<TXEN)
+OUT 	UCSRB, R16
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RCALL	Delay10K
+RJMP	Start
+
+;------------------------------------------------------------
+PrintF:
+LPM	R17,Z+
+CP	R17,c00
+BRNE	Prn1
+RET
+Prn1:
+PUSH	ZL
+PUSH	ZH
+RCALL	WrTxBuff
+POP	ZH
+POP	ZL
+RJMP	PrintF
+;------------------------------------------------------------
+Msg1:	.db	"Hello! UART Test Programm welcome to you.",0x0D,0x0A,0
+Msg2:	.db	"No command allowed.",0x0D,0x0A,0
+MsgS:	.db	"Start I2C",0x0D,0x0A,0
+MsgE:	.db	"End I2C",0x0D,0x0A,0
+Msgz:	.db	0x0D,0x0A,0x0D,0x0A,0x0D,0x0A,0,0
+;------------------------------------------------------------
+MainEnd:
+
+
+

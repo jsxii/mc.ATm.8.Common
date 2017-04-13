@@ -6,7 +6,7 @@ c:\usr\git\bin\git.exe add --all .\
 echo -- stage --
 c:\usr\git\bin\git.exe stage
 echo -- commit --
-c:\usr\git\bin\git.exe commit -m "0300wsbss00182\ivm"
+c:\usr\git\bin\git.exe commit -m "%computername%\%username%"
 echo -- push --
 c:\usr\git\bin\git.exe push --set-upstream origin master
 

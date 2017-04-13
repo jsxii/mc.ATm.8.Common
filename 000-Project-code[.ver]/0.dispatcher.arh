@@ -1,0 +1,34 @@
+#
+---
+Dispatcher:
+  - Code:
+    - TaskQueueGet: { in: null, out: [<id>,<param|index>] }
+    - TaskQueueSet: { in: [<id>,<param|index>], out: result, callback: BSOD }
+    - TaskQueueCycle { null }
+    = TaskDefinitionBlock [<id>,<addr>]
+  - HW: 
+    - null
+  - RAM:
+    - Queue
+    - Counters/Pointers
+
+SysTimer:
+  - Code:
+    - TimerQueueSet { in: [<id>,<param|index>,<counter>], out: result, callback: BSOD }
+    - TimerQueueGet { in: number, out: [<id>,<param|index>,<counter>] }
+    - TimerQueueISR { null }
+  - HW:
+    - Timer_16
+  - RAM:
+    - Queue
+    - Counters/Pointers
+
+BSOD:
+  - Code:
+    - SendMessage: { in: <messageCode>, out: null }
+    - Stop: { null }
+    = MessageTextBlock [<id>,<text>]
+  - HW:
+    - UART
+  - RAM:
+    - null

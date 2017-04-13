@@ -1,5 +1,4 @@
 @echo off
-cd d:\Data\_github\mc.ATm.8.Common\
 echo -- rm --
 d:\usr\git\bin\git.exe rm -r --cached .\
 echo -- add --

@@ -1,0 +1,48 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>U:\home\Programm\z001-abs-tester01</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>U:\home\Programm\z001-abs-tester01\00.main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8def.inc</FILE>
+  <FILE>U:\home\Programm\z001-abs-tester01\00.define.inc</FILE>
+  <FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE>
+  <FILE>U:\home\Programm\z001-abs-tester01\03.Init.Uart.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>U:\home\Programm\z001-abs-tester01\z001-abs-tester01.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>U:\home\Programm\z001-abs-tester01\z001-abs-tester01.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>U:\home\Programm\z001-abs-tester01\z001-abs-tester01.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <intRESET><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>4</LINE></intRESET>
+  <Initialisation><FILE>U:\home\Programm\z001-abs-tester01\00.main.asm</FILE><LINE>10</LINE></Initialisation>
+  <intINT0><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>5</LINE></intINT0>
+  <intINT1><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>7</LINE></intINT1>
+  <intT2comp><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>9</LINE></intT2comp>
+  <intT2ovf><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>11</LINE></intT2ovf>
+  <intT1capt><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>13</LINE></intT1capt>
+  <intT1compA><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>15</LINE></intT1compA>
+  <intT1compB><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>17</LINE></intT1compB>
+  <intT1ovf><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>19</LINE></intT1ovf>
+  <intT0ovf><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>21</LINE></intT0ovf>
+  <intSPIstc><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>23</LINE></intSPIstc>
+  <intUSARTrxc><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>25</LINE></intUSARTrxc>
+  <intUSARTudre><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>27</LINE></intUSARTudre>
+  <intUSARTtxc><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>29</LINE></intUSARTtxc>
+  <intADCcompl><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>31</LINE></intADCcompl>
+  <intEErdy><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>33</LINE></intEErdy>
+  <intAcomp><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>35</LINE></intAcomp>
+  <intTWI><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>37</LINE></intTWI>
+  <intSPMrdy><FILE>U:\home\Programm\z001-abs-tester01\01.vectors.asm</FILE><LINE>39</LINE></intSPMrdy>
+  <InitUART><FILE>U:\home\Programm\z001-abs-tester01\03.Init.Uart.asm</FILE><LINE>2</LINE></InitUART>
+  <Buffer><FILE>U:\home\Programm\z001-abs-tester01\00.main.asm</FILE><LINE>34</LINE></Buffer>
+ </LABELS>
+</ASSEMBLER_INFO>

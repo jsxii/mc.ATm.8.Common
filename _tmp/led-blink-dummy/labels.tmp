@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>U:\home\Programm\led-blink-dummy</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MainLoop1><FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.asm</FILE><LINE>13</LINE></MainLoop1>
+  <MainDelay1><FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.asm</FILE><LINE>37</LINE></MainDelay1>
+  <MainDelay1Loop1><FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.asm</FILE><LINE>39</LINE></MainDelay1Loop1>
+  <MainDelay1Loop2><FILE>U:\home\Programm\led-blink-dummy\led-blink-dummy.asm</FILE><LINE>41</LINE></MainDelay1Loop2>
+ </LABELS>
+</ASSEMBLER_INFO>

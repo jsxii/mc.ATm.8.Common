@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "U:\home\Programm\a01-uart-debug\labels.tmp" -fI -W+ie -C V2E -o "U:\home\Programm\a01-uart-debug\a01-uart-debug.hex" -d "U:\home\Programm\a01-uart-debug\a01-uart-debug.obj" -e "U:\home\Programm\a01-uart-debug\a01-uart-debug.eep" -m "U:\home\Programm\a01-uart-debug\a01-uart-debug.map" "U:\home\Programm\a01-uart-debug\main.asm"

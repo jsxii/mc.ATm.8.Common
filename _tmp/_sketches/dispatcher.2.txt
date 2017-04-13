@@ -1,0 +1,52 @@
+=TimerQueue=
+TaskId(1) : Count(2) : Param(1)
+
+=TaskQueue=
+TaskId(1) : Param(1)
+
+=Task=
+TaskId(1) : Addr(2) : Priority(1)
+
+SetTask(id,val);
+SetDeferedTask(id,val,count);
+
+ISR SysTimer();
+DispetcherEntry();
+
+Task01:
+try { ... }
+catch { SetTask(Task01Exception) }
+Task01Exception:
+{...}
+
+
+
+
+
+
+
+
+
+a123:
+CP	TxL,TxF
+BRNE	Rtb1
+LDI	R18,2		; if ret in next check
+SBRS	STREG,TxFull	; check
+RET			; ret if clear 'full'
+Rtb1:
+MOV	R16,TxF
+LDI	ZH,high(TxBuff)	; load buff start addr
+LDI	ZL,low(TxBuff)	; -//--//-
+ADD	ZL,R16		; add pointer
+ADC	ZH,c00		; -//--//-
+LD	R17,Z		; read from buff
+INC	R16
+CPI	R16,TxBuffSize	; end buff ?
+BRNE	Rtb2		; no, next
+MOV	R16,c00		; yes? go to 0
+Rtb2:
+MOV	TxF,R16		; save pointer
+CBR	STREG,(1<<TxFull)	; clear 'full' flag
+MOV	R18,c00		; 'no error' return
+RET
+;------------------------------------------------------------

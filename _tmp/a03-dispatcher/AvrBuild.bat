@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "U:\home\Programm\a03-dispatcher\labels.tmp" -fI -W+ie -C V2E -o "U:\home\Programm\a03-dispatcher\a03-dispatcher.hex" -d "U:\home\Programm\a03-dispatcher\a03-dispatcher.obj" -e "U:\home\Programm\a03-dispatcher\a03-dispatcher.eep" -m "U:\home\Programm\a03-dispatcher\a03-dispatcher.map" "U:\home\Programm\a03-dispatcher\main.asm"

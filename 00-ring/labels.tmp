@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>C:\Local\_github\mc.ATm.8.Common\00-ring</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\00-ring.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\00-ring.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\00-ring.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <InPnt><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>5</LINE></InPnt>
+  <OutPnt><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>6</LINE></OutPnt>
+  <RBuff><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>7</LINE></RBuff>
+  <PutBuff><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>10</LINE></PutBuff>
+  <put2><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>23</LINE></put2>
+  <GetBuff><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>30</LINE></GetBuff>
+  <get2><FILE>C:\Local\_github\mc.ATm.8.Common\00-ring\main.asm</FILE><LINE>37</LINE></get2>
+ </LABELS>
+</ASSEMBLER_INFO>

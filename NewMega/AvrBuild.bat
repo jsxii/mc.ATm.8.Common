@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Local\_github\mc.ATm.8.Common\NewMega\labels.tmp" -fI -W+ie -C V2E -o "C:\Local\_github\mc.ATm.8.Common\NewMega\NewMega-rtos.hex" -d "C:\Local\_github\mc.ATm.8.Common\NewMega\NewMega-rtos.obj" -e "C:\Local\_github\mc.ATm.8.Common\NewMega\NewMega-rtos.eep" -m "C:\Local\_github\mc.ATm.8.Common\NewMega\NewMega-rtos.map" "C:\Local\_github\mc.ATm.8.Common\NewMega\NewMega-rtos.asm"

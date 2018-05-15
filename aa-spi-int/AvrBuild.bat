@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\labels.tmp" -fI -W+ie -C V2E -o "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.hex" -d "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.obj" -e "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.eep" -m "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.map" "C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm"

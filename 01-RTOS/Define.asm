@@ -1,36 +1,33 @@
-;------------------------------------------------------------
-; Macros
-;------------------------------------------------------------
-.MACRO	OUTI
+;-- Macros --------------------------------------------------
+.MACRO	OUTI	; [Port, Value]
 	LDI	R16, @1
 	OUT	@0, R16
 .ENDMACRO
 ;------------------------------------------------------------
-.MACRO	SetTT
+.MACRO	SetTT	; [TaskId, Timer]; Timer = 0..65535
 	LDI	XL, low(@1)
 	LDI	XH, high(@1)
 	LDI	R16, @0
 	RCALL	SetTimer
 .ENDMACRO
+;------------------------------------------------------------
 
-;------------------------------------------------------------
-; Variables
-;------------------------------------------------------------
+;-- Variables -----------------------------------------------
+.equ	MainClock	= 8000000		; CPU Clock
 .equ	TaskQueueSize	= 32			; 8/16/32/64 !!
 .equ	TimersPoolSize	= 8
-.equ	MainClock	= 8000000		; CPU Clock
-.equ	TimerDivider	= MainClock/64/1000 	; 1 mS
+.equ	QueueSize01	= 32			; Ring buffer 01 size
+.equ	Tmr_Counter =	0x83			; 8MHz
+.equ	Tmr_Prescaler =	0x03			; 8MHz
 ;.equ	XTAL		= MainClock
 ;.equ	baudrate	= 19200
 ;.equ	bauddivider	= XTAL / (16 * baudrate) - 1
-
-
-
 ;------------------------------------------------------------
-; Defines
-;------------------------------------------------------------
+
+;-- Defines -------------------------------------------------
 ; aliases
 .def	OSreg	= R16
 ; constants
 .def	c00	= R10
 .def	cFF	= R11
+;------------------------------------------------------------

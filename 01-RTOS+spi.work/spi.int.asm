@@ -1,0 +1,48 @@
+;.DSEG
+;Vram:		.byte	8
+;Vpnt:		.byte	1
+iSpi:
+	PUSH	R16
+	IN	R16, SREG
+	PUSH	R16
+	PUSH	R17
+	PUSH	ZL
+	PUSH	ZH
+	LDS	R16, Vpnt
+	PUSH	R16
+	ANDI	R16, 0x80
+	BREQ	iSpiAddr
+	LDI	ZL, low(Vram)
+	LDI	ZH, high(Vram)
+	POP	R16
+	ANDI	R16, 7
+	ADD	ZL, R16
+	ADC	ZH, c00
+	LD	R17, Z
+	OUT	SPDR, R17
+	INC	R16
+	ANDI	R16, 7
+	BRNE	iSpiExit
+	CBI	SPCR, 7
+iSpiExit:
+	STS	Vpnt, R16
+	POP	ZH
+	POP	ZL
+	POP	R17
+	POP	R16
+	OUT	SREG, R16
+	POP	R16
+	RETI
+iSpiAddr:
+	SBI	CSPORT, CSPIN
+	NOP
+	NOP
+	CBI	CSPORT, CSPIN
+	POP	R16
+	INC	R16
+	OUT	SPDR, R16
+	DEC	R16
+	ORI	R16, 0x80
+	RJMP	iSpiExit
+	
+

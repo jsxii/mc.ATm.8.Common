@@ -1,0 +1,45 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>C:\Local\_github\mc.ATm.8.Common\aa-spi-int</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\aa-spi-int.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Reset><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>155</LINE></Reset>
+  <iTimer><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>104</LINE></iTimer>
+  <iSPI><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>36</LINE></iSPI>
+  <SpiGetBuff><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>359</LINE></SpiGetBuff>
+  <iSpiEmpty><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>50</LINE></iSpiEmpty>
+  <iSpiExit><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>93</LINE></iSpiExit>
+  <Index><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>381</LINE></Index>
+  <SpiPutBuff><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>340</LINE></SpiPutBuff>
+  <Counter1><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>379</LINE></Counter1>
+  <iTmr2><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>123</LINE></iTmr2>
+  <iTmrExit><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>145</LINE></iTmrExit>
+  <Counter2><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>380</LINE></Counter2>
+  <iTmr3><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>131</LINE></iTmr3>
+  <SpiIn><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>383</LINE></SpiIn>
+  <SpiOut><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>384</LINE></SpiOut>
+  <Queue><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>382</LINE></Queue>
+  <DumpSend><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>333</LINE></DumpSend>
+  <Loop><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>329</LINE></Loop>
+  <DS2><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>335</LINE></DS2>
+  <SB2><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>349</LINE></SB2>
+  <SpiQueue><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>385</LINE></SpiQueue>
+  <SB4><FILE>C:\Local\_github\mc.ATm.8.Common\aa-spi-int\main.asm</FILE><LINE>366</LINE></SB4>
+ </LABELS>
+</ASSEMBLER_INFO>
